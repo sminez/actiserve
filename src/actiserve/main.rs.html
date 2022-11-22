@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/main.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>main.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script><script defer src="../../main.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../actiserve/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a><h2 class="location"></h2></nav><nav class="sidebar"><a class="sidebar-logo" href="../../actiserve/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../actiserve/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><button type="button">?</button></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/main.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>main.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" href="../../normalize.css"><link rel="stylesheet" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" href="../../ayu.css" disabled><link rel="stylesheet" href="../../dark.css" disabled><link rel="stylesheet" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script><script defer src="../../main.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../actiserve/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a><h2 class="location"></h2></nav><nav class="sidebar"><a class="sidebar-logo" href="../../actiserve/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../actiserve/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><button type="button">?</button></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">1</span>
 <span id="2">2</span>
 <span id="3">3</span>
 <span id="4">4</span>
@@ -80,87 +80,109 @@
 <span id="80">80</span>
 <span id="81">81</span>
 <span id="82">82</span>
-</pre><pre class="rust"><code><span class="kw">use</span> <span class="ident">axum::Server</span>;
-<span class="kw">use</span> <span class="ident">clap::Parser</span>;
-<span class="kw">use</span> <span class="ident">routes::build_routes</span>;
-<span class="kw">use</span> <span class="ident">std</span>::{<span class="ident">net::SocketAddr</span>, <span class="ident">panic</span>, <span class="ident">path::PathBuf</span>, <span class="ident">sync::Arc</span>};
-<span class="kw">use</span> <span class="ident">tracing</span>::{<span class="ident">error</span>, <span class="ident">info</span>, <span class="ident">subscriber</span>};
-<span class="kw">use</span> <span class="ident">tracing_subscriber::EnvFilter</span>;
+<span id="83">83</span>
+<span id="84">84</span>
+<span id="85">85</span>
+<span id="86">86</span>
+<span id="87">87</span>
+<span id="88">88</span>
+<span id="89">89</span>
+<span id="90">90</span>
+<span id="91">91</span>
+<span id="92">92</span>
+<span id="93">93</span>
+</pre><pre class="rust"><code><span class="kw">use </span>axum::Server;
+<span class="kw">use </span>clap::Parser;
+<span class="kw">use </span>routes::build_routes;
+<span class="kw">use </span>std::{net::SocketAddr, panic, path::PathBuf, sync::Arc};
+<span class="kw">use </span>tracing::{error, info, subscriber};
+<span class="kw">use </span>tracing_subscriber::EnvFilter;
 
-<span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::state</span>::{<span class="ident">Db</span>, <span class="ident">State</span>};
+<span class="kw">use </span><span class="kw">crate</span>::state::{Db, State};
 
-<span class="kw">mod</span> <span class="ident">client</span>;
-<span class="kw">mod</span> <span class="ident">error</span>;
-<span class="kw">mod</span> <span class="ident">routes</span>;
-<span class="kw">mod</span> <span class="ident">signature</span>;
-<span class="kw">mod</span> <span class="ident">state</span>;
-<span class="kw">mod</span> <span class="ident">util</span>;
+<span class="kw">mod </span>client;
+<span class="kw">mod </span>error;
+<span class="kw">mod </span>routes;
+<span class="kw">mod </span>signature;
+<span class="kw">mod </span>state;
+<span class="kw">mod </span>util;
 
-<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">error</span>::{<span class="ident">Error</span>, <span class="prelude-ty">Result</span>};
+<span class="kw">pub use </span>error::{Error, <span class="prelude-ty">Result</span>};
 
-<span class="comment">// TODO: move this to Args</span>
-<span class="kw">const</span> <span class="ident">PORT</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">4242</span>;
+<span class="comment">// TODO: move this to Args
+</span><span class="kw">const </span>PORT: u16 = <span class="number">4242</span>;
 
-<span class="doccomment">/// Lookup our base url from the environment or default to localhost:4242</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">base_url</span>() -&gt; <span class="kw-2">&amp;</span><span class="lifetime">&#39;static</span> <span class="ident">str</span> {
-    <span class="comment">// TODO: move this to Args or build it from there.</span>
-    <span class="macro">option_env!</span>(<span class="string">&quot;BASE_URL&quot;</span>).<span class="ident">unwrap_or</span>(<span class="string">&quot;127.0.0.1:4242&quot;</span>)
+<span class="doccomment">/// Lookup our base url from the environment or default to localhost:4242
+</span><span class="kw">pub fn </span>base_url() -&gt; <span class="kw-2">&amp;</span><span class="lifetime">&#39;static </span>str {
+    <span class="comment">// TODO: move this to Args or build it from there.
+    </span><span class="macro">option_env!</span>(<span class="string">&quot;BASE_URL&quot;</span>).unwrap_or(<span class="string">&quot;127.0.0.1:4242&quot;</span>)
 }
 
-<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Parser</span>, <span class="ident">Debug</span>)]</span>
-<span class="attribute">#[<span class="ident">command</span>(<span class="ident">author</span>, <span class="ident">version</span>, <span class="ident">about</span>, <span class="ident">long_about</span> <span class="op">=</span> <span class="prelude-val">None</span>)]</span>
-<span class="kw">struct</span> <span class="ident">Args</span> {
-    <span class="attribute">#[<span class="ident">arg</span>(<span class="ident">long</span>)]</span>
-    <span class="ident">data_dir</span>: <span class="ident">PathBuf</span>,
+<span class="attribute">#[derive(Parser, Debug)]
+#[command(author, version, about, long_about = <span class="prelude-val">None</span>)]
+</span><span class="kw">struct </span>Args {
+    <span class="doccomment">/// Directory to use for storing JSON DB state
+    </span><span class="attribute">#[arg(long, default_value = <span class="string">&quot;.&quot;</span>)]
+    </span>data_dir: PathBuf,
+
+    <span class="doccomment">/// Path to a valid private key in PEM format
+    </span><span class="attribute">#[arg(long)]
+    </span>private_key: PathBuf,
 }
 
-<span class="attribute">#[<span class="ident">tokio::main</span>]</span>
-<span class="kw">async</span> <span class="kw">fn</span> <span class="ident">main</span>() {
-    <span class="kw">let</span> <span class="ident">args</span> <span class="op">=</span> <span class="ident">Args::parse</span>();
+<span class="attribute">#[tokio::main]
+</span><span class="kw">async fn </span>main() {
+    <span class="kw">let </span>args = Args::parse();
 
-    <span class="ident">subscriber::set_global_default</span>(
-        <span class="ident">tracing_subscriber::fmt</span>()
-            .<span class="ident">json</span>()
-            .<span class="ident">flatten_event</span>(<span class="bool-val">true</span>)
-            .<span class="ident">with_env_filter</span>(<span class="ident">EnvFilter::from_default_env</span>())
-            .<span class="ident">finish</span>(),
+    subscriber::set_global_default(
+        tracing_subscriber::fmt()
+            .json()
+            .flatten_event(<span class="bool-val">true</span>)
+            .with_env_filter(EnvFilter::from_default_env())
+            .finish(),
     )
-    .<span class="ident">expect</span>(<span class="string">&quot;this to be the only global subscriber&quot;</span>);
+    .expect(<span class="string">&quot;this to be the only global subscriber&quot;</span>);
 
-    <span class="ident">panic::set_hook</span>(<span class="ident">Box::new</span>(<span class="op">|</span><span class="ident">panic</span><span class="op">|</span> {
-        <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="ident">location</span>) <span class="op">=</span> <span class="ident">panic</span>.<span class="ident">location</span>() {
+    panic::set_hook(Box::new(|panic| {
+        <span class="kw">if let </span><span class="prelude-val">Some</span>(location) = panic.location() {
             <span class="macro">error!</span>(
-                <span class="ident">message</span><span class="op">=</span><span class="op">%</span><span class="ident">panic</span>,
-                <span class="ident">panic</span>.<span class="ident">file</span><span class="op">=</span><span class="ident">location</span>.<span class="ident">file</span>(),
-                <span class="ident">panic</span>.<span class="ident">line</span><span class="op">=</span><span class="ident">location</span>.<span class="ident">line</span>(),
-                <span class="ident">panic</span>.<span class="ident">column</span><span class="op">=</span><span class="ident">location</span>.<span class="ident">column</span>()
+                message=%panic,
+                panic.file=location.file(),
+                panic.line=location.line(),
+                panic.column=location.column()
             );
-        } <span class="kw">else</span> {
-            <span class="macro">error!</span>(<span class="ident">message</span><span class="op">=</span><span class="op">%</span><span class="ident">panic</span>)
+        } <span class="kw">else </span>{
+            <span class="macro">error!</span>(message=%panic)
         }
     }));
 
-    <span class="ident">run_server</span>(<span class="ident">args</span>).<span class="kw">await</span>
-}
+    run_server(args).<span class="kw">await
+</span>}
 
-<span class="kw">async</span> <span class="kw">fn</span> <span class="ident">run_server</span>(<span class="ident">args</span>: <span class="ident">Args</span>) {
-    <span class="macro">info!</span>(<span class="ident">port</span> <span class="op">=</span> <span class="ident">PORT</span>, <span class="string">&quot;starting service&quot;</span>);
+<span class="kw">async fn </span>run_server(args: Args) {
+    <span class="macro">info!</span>(path = %args.private_key.display(), <span class="string">&quot;loading private key&quot;</span>);
+    <span class="kw">let </span>priv_key_pem =
+        std::fs::read_to_string(args.private_key).expect(<span class="string">&quot;unable to read private key&quot;</span>);
 
-    <span class="kw">let</span> <span class="ident">priv_key_pem</span> <span class="op">=</span> <span class="ident">std::fs::read_to_string</span>(<span class="string">&quot;priv-key.pem&quot;</span>).<span class="ident">expect</span>(<span class="string">&quot;unable to read private key&quot;</span>);
+    <span class="macro">info!</span>(
+        data_dir = %args.data_dir.display(),
+        <span class="string">&quot;initialising DB&quot;
+    </span>);
+    <span class="kw">let </span>db = Db::new(args.data_dir).expect(<span class="string">&quot;unable to create database&quot;</span>);
 
-    <span class="kw">let</span> <span class="ident">db</span> <span class="op">=</span> <span class="ident">Db::new</span>(<span class="ident">args</span>.<span class="ident">data_dir</span>).<span class="ident">expect</span>(<span class="string">&quot;unable to create database&quot;</span>);
+    <span class="kw">let </span>state: Arc&lt;State&gt; = Arc::new(State::new(db, <span class="kw-2">&amp;</span>priv_key_pem));
+    <span class="kw">let </span>app = build_routes(state);
 
-    <span class="kw">let</span> <span class="ident">state</span>: <span class="ident">Arc</span><span class="op">&lt;</span><span class="ident">State</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Arc::new</span>(<span class="ident">State::new</span>(<span class="ident">db</span>, <span class="kw-2">&amp;</span><span class="ident">priv_key_pem</span>));
-    <span class="kw">let</span> <span class="ident">app</span> <span class="op">=</span> <span class="ident">build_routes</span>(<span class="ident">state</span>);
+    <span class="kw">let </span>addr: SocketAddr = base_url()
+        .parse()
+        .expect(<span class="string">&quot;unable to parse address and port&quot;</span>);
 
-    <span class="kw">let</span> <span class="ident">addr</span>: <span class="ident">SocketAddr</span> <span class="op">=</span> <span class="ident">base_url</span>()
-        .<span class="ident">parse</span>()
-        .<span class="ident">expect</span>(<span class="string">&quot;unable to parse address and port&quot;</span>);
+    <span class="macro">info!</span>(port = PORT, <span class="string">&quot;starting service&quot;</span>);
 
-    <span class="ident">Server::bind</span>(<span class="kw-2">&amp;</span><span class="ident">addr</span>)
-        .<span class="ident">serve</span>(<span class="ident">app</span>.<span class="ident">into_make_service</span>())
-        .<span class="kw">await</span>
-        .<span class="ident">expect</span>(<span class="string">&quot;server to start&quot;</span>);
+    Server::bind(<span class="kw-2">&amp;</span>addr)
+        .serve(app.into_make_service())
+        .<span class="kw">await
+        </span>.expect(<span class="string">&quot;server to start&quot;</span>);
 }
 </code></pre></div>
-</section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="actiserve" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.64.0 (a55dd71d5 2022-09-19)" ></div></body></html>
+</section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="actiserve" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.65.0 (897e37553 2022-11-02)" ></div></body></html>
