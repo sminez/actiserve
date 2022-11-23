@@ -54,7 +54,7 @@
 </pre><pre class="rust"><code><span class="doccomment">//! Routes available on this server.</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! We are implementing a subset of the activitypub API in order to function as a relay</span>
-<span class="kw">use</span> <span class="kw">crate</span>::{<span class="ident">client::Context</span>, <span class="ident">State</span>};
+<span class="kw">use</span> <span class="kw">crate</span>::{<span class="ident">client::Context</span>, <span class="ident">state::State</span>};
 <span class="kw">use</span> <span class="ident">axum</span>::{
     <span class="ident">extract::Host</span>,
     <span class="ident">routing</span>::{<span class="ident">get</span>, <span class="ident">post</span>},
@@ -68,7 +68,7 @@
 <span class="kw">mod</span> <span class="ident">nodeinfo</span>;
 <span class="kw">mod</span> <span class="ident">well_known</span>;
 
-<span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">fn</span> <span class="ident">build_routes</span>(<span class="ident">state</span>: <span class="ident">Arc</span><span class="op">&lt;</span><span class="ident">State</span><span class="op">&gt;</span>) -&gt; <span class="ident">Router</span> {
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">build_routes</span>(<span class="ident">state</span>: <span class="ident">Arc</span><span class="op">&lt;</span><span class="ident">State</span><span class="op">&gt;</span>) -&gt; <span class="ident">Router</span> {
     <span class="ident">Router::new</span>()
         .<span class="ident">route</span>(<span class="string">&quot;/actor&quot;</span>, <span class="ident">get</span>(<span class="ident">get_actor</span>))
         .<span class="ident">route</span>(<span class="string">&quot;/inbox&quot;</span>, <span class="ident">post</span>(<span class="ident">inbox::post</span>))

@@ -249,13 +249,15 @@
 <span id="249">249</span>
 <span id="250">250</span>
 <span id="251">251</span>
+<span id="252">252</span>
 </pre><pre class="rust"><code><span class="kw">use</span> <span class="kw">crate</span>::{
     <span class="ident">base_url</span>,
     <span class="ident">client</span>::{<span class="ident">Activity</span>, <span class="ident">ActivityType</span>, <span class="ident">Actor</span>, <span class="ident">IdOrObject</span>},
     <span class="ident">routes::extractors</span>,
     <span class="ident">signature::validate_signature</span>,
+    <span class="ident">state::State</span>,
     <span class="ident">util</span>::{<span class="ident">host_from_uri</span>, <span class="ident">id_from_json</span>},
-    <span class="ident">Error</span>, <span class="prelude-ty">Result</span>, <span class="ident">State</span>,
+    <span class="ident">Error</span>, <span class="prelude-ty">Result</span>,
 };
 <span class="kw">use</span> <span class="ident">axum</span>::{
     <span class="ident">extract</span>::{<span class="ident">Extension</span>, <span class="ident">Host</span>, <span class="ident">Json</span>, <span class="ident">OriginalUri</span>},
