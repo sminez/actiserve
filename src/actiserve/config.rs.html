@@ -52,16 +52,6 @@
 <span id="52">52</span>
 <span id="53">53</span>
 <span id="54">54</span>
-<span id="55">55</span>
-<span id="56">56</span>
-<span id="57">57</span>
-<span id="58">58</span>
-<span id="59">59</span>
-<span id="60">60</span>
-<span id="61">61</span>
-<span id="62">62</span>
-<span id="63">63</span>
-<span id="64">64</span>
 </pre><pre class="rust"><code><span class="kw">use </span>serde::{Deserialize, Serialize};
 <span class="kw">use </span>std::{fs, net::Ipv4Addr, path::PathBuf};
 
@@ -81,11 +71,12 @@
 }
 
 <span class="kw">impl </span>Config {
-    <span class="doccomment">/// Try to load our config file if it exists, otherwise write out our
-    /// default config and return that.
+    <span class="doccomment">/// Load server config from the given path.
     ///
-    /// Panics if the config file that is present is invalid or if we are unable
-    /// to write out our default config.
+    /// # Panics
+    ///
+    /// This method will panic if the path given is invalid or if the file is
+    /// not valid as a YAML [Config] file.
     </span><span class="kw">pub fn </span>load(path: PathBuf) -&gt; <span class="self">Self </span>{
         <span class="kw">match </span>fs::read_to_string(<span class="kw-2">&amp;</span>path) {
             <span class="prelude-val">Ok</span>(content) =&gt; serde_yaml::from_str(<span class="kw-2">&amp;</span>content)
@@ -114,17 +105,6 @@
     </span><span class="kw">pub </span>allow_list: bool,
     <span class="doccomment">/// Instances that should accepted. Only enforced if allowList=true
     </span><span class="kw">pub </span>allowed_instances: Vec&lt;String&gt;,
-}
-
-<span class="kw">impl </span>Default <span class="kw">for </span>ActivityPubConfig {
-    <span class="kw">fn </span>default() -&gt; <span class="self">Self </span>{
-        <span class="self">Self </span>{
-            host: String::from(<span class="string">&quot;localhost&quot;</span>),
-            blocked_instances: Vec::new(),
-            allow_list: <span class="bool-val">false</span>,
-            allowed_instances: Vec::new(),
-        }
-    }
 }
 </code></pre></div>
 </section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="actiserve" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.65.0 (897e37553 2022-11-02)" ></div></body></html>

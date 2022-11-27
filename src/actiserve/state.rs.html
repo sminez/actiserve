@@ -169,6 +169,12 @@
 <span id="169">169</span>
 <span id="170">170</span>
 <span id="171">171</span>
+<span id="172">172</span>
+<span id="173">173</span>
+<span id="174">174</span>
+<span id="175">175</span>
+<span id="176">176</span>
+<span id="177">177</span>
 </pre><pre class="rust"><code><span class="doccomment">//! Server shared state
 </span><span class="kw">use crate</span>::{
     client::{ActivityPubClient, Actor},
@@ -318,6 +324,7 @@
 <span class="attribute">#[cfg(test)]
 </span><span class="kw">mod </span>tests {
     <span class="kw">use super</span>::<span class="kw-2">*</span>;
+    <span class="kw">use </span><span class="kw">crate</span>::config::ActivityPubConfig;
     <span class="kw">use </span>std::net::Ipv4Addr;
 
     <span class="kw">impl </span>State {
@@ -328,7 +335,12 @@
                     port: <span class="number">4242</span>,
                     data_dir: PathBuf::from(<span class="string">&quot;.&quot;</span>),
                     private_key_path: PathBuf::from(<span class="string">&quot;private-key.pem&quot;</span>),
-                    activity_pub: Default::default(),
+                    activity_pub: ActivityPubConfig {
+                        host: <span class="string">&quot;localhost&quot;</span>.into(),
+                        blocked_instances: <span class="macro">vec!</span>[],
+                        allow_list: <span class="bool-val">false</span>,
+                        allowed_instances: <span class="macro">vec!</span>[],
+                    },
                 },
                 db,
                 client: ActivityPubClient::new_with_test_key(),
